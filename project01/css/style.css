@@ -1,0 +1,33 @@
+/* colors
+    #5CF3EE
+    #27A9D7
+    #4E86DB
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Yaldevi', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777777;
+    padding: 30px;
+}
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(92, 243, 238, 0.7),
+            rgba(39, 169, 215, 0.7),
+            rgba(78, 134, 219, 0.7)
+        ),
+        url('../img/header-banner.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
+}
