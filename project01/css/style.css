@@ -48,11 +48,13 @@ body {
     top: 50%;
     left: 60%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 40px;
 }
 .heading-primary__main {
     display: block;
@@ -104,4 +106,59 @@ body {
     100% {
         transform: rotateY(360deg);
     }
+}
+@keyframes moveInBtn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+.btn-animated {
+    animation: moveInBtn 0.7s ease 1s;
+    animation-fill-mode: backwards;
+}
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 20px;
+    display: inline-block;
+    border-radius: 50px;
+    transition: all 0.3s;
+    position:relative;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 2px 5px; rgba(0,0,0,0.3);
+}
+.btn:active {
+    transform: translateY(-1px);
+}
+.btn-white {
+    background-color: #ffffff;
+    color: #777777;
+}
+.btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width:100%;
+    border-radius: 50px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: all .3s;
+}
+.btn-white::after {
+    background-color:#ffffff;
+
+}
+.btn:hover::after {
+    transform: scaleX(1.2) scaleY(1.4) ;
+    opacity:0;
 }
