@@ -47,3 +47,13 @@
         transform: translate(0px);
     }
 }
+@keyframes skewText {
+    0% {
+        opacity: 0;
+        transform: skewX(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: skewX(180deg);
+    }
+}

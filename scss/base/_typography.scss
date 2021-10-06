@@ -7,3 +7,24 @@ body {
     color: $color-grey-dark;
     padding: 30px;
 }
+
+.heading-secondary {
+    backface-visibility: hidden;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.1s ease;
+    &:hover {
+        animation: skewText 0.2s ease;
+        text-shadow: 0.2rem 0.2rem 0.2rem rgba($color-black, 0.1);
+    }
+}
