@@ -1,5 +1,6 @@
 /* Variables */
 /* Colors */
+/* Font */
 /* GRID */
 /* Reset */
 *,
@@ -64,7 +65,7 @@ body {
 body {
   font-family: 'Yaldevi', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777777;
   padding: 30px; }
@@ -84,11 +85,36 @@ body {
     animation: skewText 0.2s ease;
     text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1); }
 
-.u-center-text {
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.txt-center {
   text-align: center; }
 
-.u-margin-bottom {
+.mg-b-lg {
   margin-bottom: 8rem; }
+
+.mg-b-md {
+  margin-bottom: 4rem; }
+
+.mg-b-sm {
+  margin-bottom: 1.5rem; }
+
+.pd-lg {
+  padding: 10rem; }
+
+.pd-md {
+  padding: 5rem; }
+
+.pd-sm {
+  padding: 1.5rem; }
 
 /* Header */
 .header {
@@ -219,6 +245,24 @@ body {
 .btn:hover::after {
   transform: scaleX(1.2) scaleY(1.4);
   opacity: 0; }
+
+.btn-txt:link, .btn-txt:visited {
+  color: #27a9d7;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #27a9d7;
+  padding: 3px;
+  transition: all 0.2s; }
+
+.btn-txt:hover {
+  background-color: #27a9d7;
+  color: #ffffff;
+  box-shadow: 1px 1px 1px #000000, 0.5;
+  transform: translateY(-0.2rem); }
+
+.btn-txt:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
 
 .section-about {
   background-color: #e2e2e2;

@@ -2,7 +2,7 @@
 body {
     font-family: 'Yaldevi', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: $default-font-size;
     line-height: 1.7;
     color: $color-grey-dark;
     padding: 30px;
@@ -26,5 +26,16 @@ body {
     &:hover {
         animation: skewText 0.2s ease;
         text-shadow: 0.2rem 0.2rem 0.2rem rgba($color-black, 0.1);
+    }
+}
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph {
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }
