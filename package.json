@@ -1,0 +1,22 @@
+{
+    "name": "advanced-css-sass",
+    "version": "1.0.0",
+    "description": "��#\u0000 \u0000a\u0000d\u0000v\u0000a\u0000n\u0000c\u0000e\u0000d\u0000-\u0000c\u0000s\u0000s\u0000-\u0000s\u0000a\u0000s\u0000s\u0000\r\u0000 \u0000",
+    "main": "index.js",
+    "scripts": {
+        "sass": " node-sass -w scss/ -o project01/css/ "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/samazevedo/advanced-css-sass.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/samazevedo/advanced-css-sass/issues"
+    },
+    "homepage": "https://github.com/samazevedo/advanced-css-sass#readme",
+    "devDependencies": {
+        "node-sass": "^6.0.1"
+    }
+}

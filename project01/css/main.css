@@ -1,0 +1,218 @@
+/* Variables */
+/* Colors */
+/* GRID */
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+/* Animations */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px); }
+  80% {
+    opacity: 0.5;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px); }
+  80% {
+    opacity: 0.5;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
+
+@keyframes rotate360 {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(360deg); } }
+
+@keyframes moveInBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
+
+/* Typography */
+body {
+  font-family: 'Yaldevi', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777777;
+  padding: 30px; }
+
+/* Header */
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to bottom, rgba(92, 243, 238, 0.7), rgba(39, 169, 215, 0.7), rgba(78, 134, 219, 0.7)), url("../img/header-banner.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%); }
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px; }
+
+.logo {
+  height: 35px; }
+
+.logo:hover {
+  animation: rotate360 0.5s ease; }
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 40px; }
+
+.heading-primary__main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation: moveInLeft 1.5s cubic-bezier(0.9, 0.6, 0.5, 1); }
+
+.heading-primary__sub {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  animation: moveInRight 1.5s cubic-bezier(0.9, 0.6, 0.5, 1); }
+
+.row {
+  max-width: 114rem;
+  background-color: khaki;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row [class^='col-'] {
+    background-color: orangered;
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+    background-color: orangered;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+
+::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+[class^='col-'] {
+  background-color: orangered;
+  float: left; }
+  [class^='col-']:not(:last-child) {
+    margin-right: 6rem; }
+
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+  background-color: orangered;
+  float: left; }
+  .col-1-of-2:not(:last-child) {
+    margin-right: 6rem; }
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3); }
+
+.col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+
+.col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4); }
+
+.col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+
+.col-3-of-4 {
+  width: calc( 3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+
+.btn-animated {
+  animation: moveInBtn 0.7s ease 1s;
+  animation-fill-mode: backwards; }
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 20px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: all 0.3s;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 2px 5px rgba 0, 0, 0, 0.3; }
+
+.btn:active {
+  transform: translateY(-1px); }
+
+.btn-white {
+  background-color: #ffffff;
+  color: #777777; }
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s; }
+
+.btn-white::after {
+  background-color: #ffffff; }
+
+.btn:hover::after {
+  transform: scaleX(1.2) scaleY(1.4);
+  opacity: 0; }
